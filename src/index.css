@@ -1,0 +1,205 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(11, 11, 11); /* Adjust the color here to match the first color of your gradient */
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+body {
+  margin: 0;
+  padding: 0; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(246, 246, 246);
+  background-image: linear-gradient(to right, rgb(135, 0, 170), rgb(57, 136, 197));
+}
+
+p, input {
+  font-size: 16px;
+}
+
+.app {
+  height: 80vh;
+  width: 80vw;
+  background-color: rgb(242, 242, 242);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/*.code-display {
+  width: 96%;
+  margin: 2;
+  height: 46%;
+  border-radius: 8px;
+  background-color: rgb(0, 0, 0);
+  overflow: hidden;
+  overflow-y: scroll;
+}*/
+
+
+
+.code-display {
+  width: 100%; /* Change this to take the full width of the parent, considering the padding */
+  height: 46%;
+  border-radius: 8px;
+  background-color: rgb(0, 0, 0);
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+
+
+
+.code-output {
+  margin: 20px,
+
+
+}
+
+.code-output p {
+  color:#ffa502
+}
+
+.buttons {
+  width: 100%;
+  height: 35px;
+  background-color: rgb(36, 34, 34);
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+}
+
+.button {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  margin: 4px;
+  background-color: red;
+}
+
+.button.f {
+  background-color: rgb(255, 96, 86);
+}
+
+.button.s {
+  background-color: rgb(255, 189, 45);
+}
+
+.button.t {
+  background-color: rgb(38, 201, 6);
+}
+
+.messages-display {
+  width: 96%;
+  margin: 2;
+  height: 46%;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+.message-display {
+  width: 100%;
+  display: flex;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: rgb(200, 200, 200);
+  margin: 5px 0;
+}
+
+p#icon {
+  padding: 0 7px;
+  
+}
+
+input {
+  margin: 2%;
+  padding: 16px;
+  border: solid rgba(0, 0, 0, 0.16) 1px;
+  box-sizing: border-box;
+  border-radius: 7px;
+}
+
+
+
+.button-container {
+  margin: 2%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-container button {
+  text-transform: uppercase;
+  padding: 7px;
+  border: none;
+  position: relative;
+  transition: .5s;
+  margin-right: 10px;
+}
+
+.button-container button:before {
+  content: '';
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  transition: .5s;
+  transform: scale(.9);
+  z-index: -1;
+}
+
+button#get-query:before {
+  background: #008000; /* Green glow for get-query button */
+}
+
+button#get-query:hover:before {
+  box-shadow: 0 0 15px #008000;
+}
+
+button#get-query:hover {
+  color: yellow;
+  box-shadow: 0 0 15px #008000;
+  text-shadow: 0 0 15px #008000;
+}
+
+button#clear-chat:before {
+  background: #FF0000; /* Red glow for clear-chat button */
+}
+
+button#clear-chat:hover:before {
+  box-shadow: 0 0 15px #FF0000;
+}
+
+button#clear-chat:hover {
+  color: #ffa502;
+  box-shadow: 0 0 15px #FF0000;
+  text-shadow: 0 0 15px #FF0000;
+}
+
+button#get-query {
+  border-radius: 10px 0 0 10px;
+  background-image: linear-gradient(to right, rgb(255, 244, 0), rgb(142, 232, 14));
+
+  ;
+}
+
+button#clear-chat {
+  border-radius: 0 10px 10px 0;
+  background-image: linear-gradient(to right, rgb(255, 124, 0), rgb(167, 18, 0));
+  margin-right: 0;
+}
+
